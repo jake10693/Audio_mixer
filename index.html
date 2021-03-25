@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="./Assets/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div id='trackPlayer1' class='container'>
+
+        <a href="./Assets/RainFallMedium PE1005201.mp3">Play me</a>
+        <audio  id='trackAudio1' controls>
+            <source src="file:///C:/Users/jcarver/Creative/Book_Song_AudioMixer/Assets/RainFallMedium%20PE1005201.mp3">
+            </audio>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="10" value="1" class="slider" id="myRange" onchange='changeVolume1(this.value)'>
+            </div>
+            <button onclick="getVolume1()" type="button">What is the volume?</button>
+        </div>
+            <div id="trackPlayer2" class='container'>
+
+          <a href="./Assets/RainFallMedium PE1005201.mp3">Play me</a>
+          <audio  id='trackAudio2' controls>
+              <source src="file:///C:/Users/jcarver/Creative/Book_Song_AudioMixer/Assets/RainFallMedium%20PE1005201.mp3">
+              </audio>
+              <div class="slidecontainer">
+                  <input type="range" min="1" max="10" value="1" class="slider" id="myRange" onchange='changeVolume2(this.value)'>
+                </div>
+                <button onclick="getVolume2()" type="button">What is the volume?</button>
+            </div>
+        </div>
+</body>
+
+<script>
+const track1 = document.getElementById("trackAudio1");
+function changeVolume1(amount) {
+    // const track = document.getElementById("trackAudio");
+    track1.volume = amount/10;
+  }
+function getVolume1() { 
+  alert(track1.volume);
+} 
+const track2 = document.getElementById("trackAudio2");
+function changeVolume2(amount) {
+    // const track = document.getElementById("trackAudio");
+    track2.volume = amount/10;
+  }
+function getVolume2() { 
+  alert(track2.volume);
+} 
+</script>
+<!-- <script src='./Assets/script.js'></script> -->
+</html>
